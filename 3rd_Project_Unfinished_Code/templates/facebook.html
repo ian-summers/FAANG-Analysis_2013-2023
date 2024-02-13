@@ -1,0 +1,10 @@
+{% extends "00_base.html" %}
+{% block content %}
+<!-- This will be the landing page for the Facebook Stock-->
+<body>
+    <!-- Display the chart as an image -->
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <img src="data:image/png;base64,{{ img_base64 }}" alt="Chart">
+    </div>
+</body>
+{% endblock %}
