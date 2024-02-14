@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Plotly Test</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="./google-heatmap.js"></script>
+
+
 </head>
 <body>
-
-<div id="myDiv" style="width:100%; max-width:900px; height:500px;"></div>
-
+    <div id="myDiv"></div>
+    <script>
+        console.log(typeof Plotly); // Should log 'object' if Plotly is loaded successfully
+    </script>
 </body>
 </html>
+
