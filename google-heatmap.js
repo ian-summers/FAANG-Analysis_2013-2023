@@ -10,18 +10,22 @@ document.addEventListener('DOMContentLoaded', function(){
             x: googleData.map(d => d.date),
             y: googleData.map(d => d.close),
             marker: {
-                size: googleData.map(d => d.volume / 10000),
-                color: googleData.map(d => d.close),
-                colorscale: 'Agsunset',
+                size: googleData.map(d => Math.sqrt(d.volume) / 250), // Adjust marker size for better visibility
+                color: googleData.map(d => d.volume),
+                colorscale: 'Viridis',
+                showscale: true // Show color scale to interpret volume
             }
         };
 
         var layout = {
-            title: 'Google (GOOG) Stock Close Value vs Volume Over Time',
-            plot_bgcolor: 'lightgray',
+            title: 'Google (GOOG) Closing Day Value vs Volume Over Time',
+            plot_bgcolor: 'ivory',
             paper_bgcolor: 'ivory',
             xaxis: { title: 'Date' },
-            yaxis: { title: 'Close Value' },
+            yaxis: { 
+                title: 'Close Value' },
+                range: [0, 'auto'],
+                rangemode: 'nonnegative' 
         };
 
         Plotly.newPlot('myDiv', [trace], layout);
