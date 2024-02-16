@@ -3,7 +3,8 @@
 - [Theme](#theme)
 - [Coding Approach](#coding-approach) 
 - [Data Wrangling Techniques](#data-wrangling-techniques)
-- [Final Visualization](#final-visualization) 
+- [Final Visualization](#final-visualization)
+- [Instructions for Using Visuals](#instructions-for-using-visuals)
 - [Ethical Considerations](#ethical-considerations)
 
 ## Introduction
@@ -27,6 +28,10 @@ To gather data for our project, we decided to pull an API from [Alpha Vantge](ht
 (insert language about the website and the flask functions). 
 
 Background image from open-source site [Unsplash](https://unsplash.com/)
+
+## Instructions for Using Visuals
+Hover over the data points within the chart to get the exact values for that date in your tooltip. For the candlestick chart, click and drag the rangefinder on the bottom to zoom in for a specific period of time. For the heatmap charts, click and drag over a time period to zoom in for the specific closing value and trade volume on that respective day.
+
 
 ## Ethical Considerations
 We encountered an ethical consideration early on in this project during the data collection stage. Originally, we were going to use data from Financial Modeling Prep's stock market API. In their [Terms of Service](https://site.financialmodelingprep.com/terms-of-service), however, their free license disallowed their data to be displayed without express consent. We switched over to Alpha Advantage's API as a result, which did not have the same restriction. Alpha Advantage's terms of use can be found [here](https://www.alphavantage.co/support/#support). 
