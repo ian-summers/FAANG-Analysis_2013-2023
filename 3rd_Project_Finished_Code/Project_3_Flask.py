@@ -57,4 +57,4 @@ def meta():
     return render_template('meta.html')
 
 if __name__ == '__main__':
-    app.run(debug=True) # Remember to switch this to false before deploying the website
+    app.run(debug=False) # Remember to switch this to false before deploying the website
