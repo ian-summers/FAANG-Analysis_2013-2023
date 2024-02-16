@@ -19,7 +19,6 @@ For this analysis, we wanted to tell the story of how FAANG performed over a 10 
 (Lay out the different technologies used in this project and how we pulled the data)
 
 ## Data Wrangling Techniques
-(Explainer on how the data was turned into a database, and then exported a json for the charting)
 To gather data for our project, we decided to pull an API from [Alpha Vantge](https://www.alphavantage.co/documentation/). The way the API call was set up, we were only able to pull 20 years worth of daily (open, high, low, close, volume) data. We pulled data for each stock in the "FAANG" group of stocks and the S&P 500 (Vanguard). From there we read all our data into a Pandas dataframe. By doing this we were able to filter the data to a timeframe that better suited our analysis needs. We also seperated our dataframe into several different dataframes in order to more easily load them into a PostgreSQL database as tables. Once the data was in a database, we then used SQLAlchemy to access our database and load it into JSON format.
 ## Final Visualization
 (insert language about the website and the flask functions). 
