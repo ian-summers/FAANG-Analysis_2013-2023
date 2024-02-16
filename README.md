@@ -22,18 +22,17 @@ We organized the codes to meet the imperative, functional, logical, and object-o
 Codes were documented and demonstrated using Visual Studio Code, Jupyter notebook and Postgres. The Candlestick chart from Plotly was our new dictionary to use for the visualization. The base code for the [candlestick charts](https://plotly.com/python/candlestick-charts) and the [heatmaps](https://plotly.com/python/heatmaps/) came from Plotly. Color schemes were also pulled from [Plotly's official documentation](https://plotly.com/python/builtin-colorscales).
 
 ## Data Wrangling Techniques
-To gather data for our project, we decided to pull an API from [Alpha Vantge](https://www.alphavantage.co/documentation/). The way the API call was set up, we were only able to pull 20 years worth of daily (open, high, low, close, volume) data. We pulled data for each stock in the "FAANG" group of stocks and the S&P 500 (Vanguard). From there we read all our data into a Pandas dataframe. By doing this we were able to filter the data to a timeframe that better suited our analysis needs. We also seperated our dataframe into several different dataframes in order to more easily load them into a PostgreSQL database as tables. Once the data was in a database, we then used SQLAlchemy to access our database and load it into JSON format.
+To gather data for our project, we decided to pull an API from [Alpha Vantge](https://www.alphavantage.co/documentation/). The way the API call was set up, we were only able to pull 20 years worth of daily (open, high, low, close, volume) data. We pulled data for each stock in the "FAANG" group of stocks and the S&P 500 (Vanguard). From there we read all our data into a Pandas dataframe. By doing this we were able to filter the data to a timeframe that better suited our analysis needs. We also separated our dataframe into several different dataframes in order to more easily load them into a PostgreSQL database as tables. Once the data was in a database, we then used SQLAlchemy to access our database and load it into JSON format.
 
 ## Final Visualization
-The base HTML of the website came from a separate project I (Jesse) am working on my own free time. I merged the HTML with a basic .css file that styled all of the HTML pages in this project and made sure the charts took up the full screen when shown. 
+The base HTML of the website came from a separate project that the team's website bdesigner (Jesse Olivsarez) am working on his own free time. The HTML is merged with a basic .css file that styled all of the HTML pages in this project and ensured the charts took up the full screen when shown. A [Udemy course](https://www.udemy.com/course/python-and-flask-bootcamp-create-websites-using-flask/) also assisted in providing the inspiration and base code.
 
 For directing the flow of the webpage and its contents I used Flask and connected each path via the {{ url_for('definition_name')}} in HTML and @app.route() in the Python file. The .css, .js, and .json files are included in the ‘static’ folder while the .html files are in the ‘templates’ folder per the proper Flask flow procedure.  
 
-Background image from open-source site [Unsplash](https://unsplash.com/)
+Background image from open-source site [Unsplash](https://unsplash.com/).
 
 ## Instructions for Using Visuals
 Hover over the data points within the chart to get the exact values for that date in your tooltip. For the candlestick chart, click and drag the rangefinder on the bottom to zoom in for a specific period of time. For the heatmap charts, click and drag over a time period to zoom in for the specific closing value and trade volume on that respective day.
-
 
 ## Ethical Considerations
 We encountered an ethical consideration early on in this project during the data collection stage. Originally, we were going to use data from Financial Modeling Prep's stock market API. In their [Terms of Service](https://site.financialmodelingprep.com/terms-of-service), however, their free license disallowed their data to be displayed without express consent. We switched over to Alpha Advantage's API as a result, which did not have the same restriction. Alpha Advantage's terms of use can be found [here](https://www.alphavantage.co/support/#support). 
