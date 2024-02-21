@@ -32,7 +32,7 @@ For directing the flow of the webpage and its contents I used Flask and connecte
 Background image from open-source site [Unsplash](https://unsplash.com/).
 
 ## Instructions for Using Visuals
-Hover over the data points within the chart to get the exact values for that date in your tooltip. For the candlestick chart, click and drag the rangefinder on the bottom to zoom in for a specific period of time. For the heatmap charts, click and drag over a time period to zoom in for the specific closing value and trade volume on that respective day.
+To run the Flask-powered website, open the directory "3rd_Project_Finished_Web_Code" on the main branch, then select "Project_3_Flask.py." Run the file and follow the generated link to the website. Hover over the data points within the chart to get the exact values for that date in your tooltip. For the candlestick chart, click and drag the rangefinder on the bottom to zoom in for a specific period of time. For the heatmap charts, click and drag over a time period to zoom in for the specific closing value and trade volume on that respective day.
 
 ## Ethical Considerations
 We encountered an ethical consideration early on in this project during the data collection stage. Originally, we were going to use data from Financial Modeling Prep's stock market API. In their [Terms of Service](https://site.financialmodelingprep.com/terms-of-service), however, their free license disallowed their data to be displayed without express consent. We switched over to Alpha Advantage's API as a result, which did not have the same restriction. Alpha Advantage's terms of use can be found [here](https://www.alphavantage.co/support/#support). 
